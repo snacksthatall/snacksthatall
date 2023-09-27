@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Snacks That's All</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="file:///C:/Users/Usuario/Downloads/Snacks%20That's%20all.png" alt="Snacks That's All">
+        <h1>Snacks That's All</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#trabaja con nosotros">Trabaja con nosotros</a></li>
+                <li><a href="#domicilios">Domicilios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h2>Inicio</h2>
+        <h3>Te damos la bienvenida a Snacks That's All</h3>
+    <p>En Snacks That's All, nos enorgullece ofrecerle una experiencia de panadería virtual única y distinguida. Más allá de nuestras deliciosas ofertas, nuestro compromiso es brindarle un servicio de calidad excepcional y productos horneados artesanales que reflejen nuestra pasión por la excelencia, creatividad e interés.</p>
+    <p>Nuestra filosofía es simple pero profunda: creemos que la comida va más allá de la nutrición; es una experiencia que puede brindar alegría y crear momentos inolvidables. Nos esforzamos por combinar la tradición de la panadería con la creatividad culinaria para ofrecer productos excepcionales que deleiten e impresionen a nuestros clientes.</p>
+    </section>
+
+    <section id="nosotros">
+        <h2>Nosotros</h2>
+        <p>La historia de Snacks That's All comienza con la visión compartida de Karol Rincón y Daniel Giraldo de ofrecer algo más que productos horneados convencionales. Nos embarcamos en esta emocionante aventura con la determinación de combinar la tradición de la panadería con la innovación culinaria.</p>
+        <h4>¿Por qué elegirnos?</h4>
+    <ul>
+        <li>Calidad Intransigente: Cada producto que sale de nuestro horno es el resultado de un compromiso inquebrantable con la calidad. Utilizamos ingredientes cuidadosamente seleccionados y técnicas artesanales para garantizar que cada bocado sea una delicia.</li>
+        <li>Creatividad y Originalidad: Buscamos constantemente nuevas formas de sorprender y cautivar a nuestros clientes. Nuestros chefs trabajan incansablemente para crear sabores y combinaciones únicas que despierten su curiosidad y paladar.</li>
+        <li>Pasión por el Arte de la Panadería: Nuestra dedicación a la panadería es una pasión que se refleja en cada producto que ofrecemos. Cada pieza es una expresión de nuestra artesanía y amor por la cocina.</li>
+        <li>Satisfacción del Cliente: Su satisfacción es nuestra mayor recompensa. Nos esforzamos por superar sus expectativas y brindarle un servicio excepcional en cada interacción.</li>
+        <li>Envío a domicilio para que disfrutes de nuestras delicias desde la comodidad de tu hogar o para que impresiones con cualquier evento deseado.</li>
+    </ul>
+    </section>
+
+    <section id="productos">
+        <h2>Productos</h2>
+        <div class="product-content">
+            <div class="product-text">
+                <p>Descubre nuestra amplia selección de productos frescos y deliciosos:</p>
+                <ul>
+                    <li><strong>Croissant Clásico:</strong> $4,500 COP</li>
+                    <li><strong>Croissant de Nutella:</strong> $5,000 COP</li>
+                    <li><strong>Croissant de Jamón y Queso:</strong> $5,500 COP</li>
+                    <h4>Panes de todo tipo</h4>
+                    <li><strong>Pan Multigrano:</strong> $7,000 COP</li>
+                    <li><strong>Pan de Espelta:</strong> $6,500 COP</li>
+                    <h4>Pasteles y postres</h4>
+                    <li><strong>Pastel de Chocolate:</strong> $15,000 COP</li>
+                    <li><strong>Tarta de Manzana:</strong> $12,500 COP</li>
+                    <h4>Galletas</h4>
+                    <li><strong>Galletas de Avena y Pasas:</strong> $2,000 COP por unidad</li>
+                    <li><strong>Galletas de Mantequilla:</strong> $1,800 COP por unidad</li>
+                    <h4>Bollería</h4>
+                    <li><strong>Roll de Canela:</strong> $4,000 COP</li>
+                    <li><strong>Bollo de Crema:</strong> $4,200 COP</li>
+                </ul>
+            </div>
+            <div class="product-image">
+                <img src="https://www.viajarafrancia.com/wp-content/uploads/2015/03/Croissant01.jpg" alt="Imagen de productos">
+            </div>
+        </div>
+    </section>
+    <section id="trabaja con nosotros">
+        <h2>Trabaja con nosotros</h2>
+        <h4>Envía tus datos al número o correo de contacto:</h4>
+        <ul>
+            <li>Adjunta tu hoja de vida y escribe tus datos para poder contactarte. </li>
+            <li>Nombre / Apellido / País / Correo Electrónico / Hoja de Vida</li>
+            <li>Hoja de Vida en archivo .PDF </li>
+        </ul>
+    </section>
+
+    <section id="domicilios">
+        <h2>Domicilios</h2>
+         <h3>Puedes contactarnos a través de:</h3>
+        <ul>
+            <li>Teléfono: (305) 371-9299</li>
+            <li>Email: karolrincon466@gmail.com</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Karol Rincón © 2023, Snacks That's All</p>
+    </footer>
+    <button id="theme-button">Cambiar Tema</button>
+
+    <script>
+
+        document.querySelectorAll('header nav ul li a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                document.querySelectorAll('section').forEach(section => {
+                    section.style.opacity = '0';
+                    section.style.display = 'none';
+                });
+
+                targetSection.style.display = 'block';
+                setTimeout(() => {
+                    targetSection.style.opacity = '1';
+                }, 100);
+            });
+        });
+
+        document.querySelectorAll('header nav ul li a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const themeButton = document.getElementById('theme-button');
+        let isDarkTheme = true;
+
+        themeButton.addEventListener('click', function () {
+            if (isDarkTheme) {
+                document.body.style.backgroundColor = '#fff';
+                document.body.style.color = '#222';
+                themeButton.style.backgroundColor = '#222';
+                themeButton.style.color = '#fff';
+            } else {
+                document.body.style.backgroundColor = '#222';
+                document.body.style.color = '#fff';
+                themeButton.style.backgroundColor = '#fff';
+                themeButton.style.color = '#222';
+            }
+            isDarkTheme = !isDarkTheme;
+        });
+    </script>
+</body>
+
+</html>
+
+
